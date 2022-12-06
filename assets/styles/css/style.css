@@ -18,7 +18,7 @@
 
 .background-container {
   margin: 0 auto;
-  background-image: url(/assets/images/header-bg.jpg);
+  background-image: url(../../images/header-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
