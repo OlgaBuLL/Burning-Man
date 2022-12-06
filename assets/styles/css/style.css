@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Anton";
-  src: url("./fonts/Anton-Regular.ttf");
+  src: url("/assets/fonts/Anton-Regular.ttf");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("./fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
   font-style: normal;
   font-weight: 400;
 }
