@@ -1,0 +1,70 @@
+.footer
+    // border: 2px solid #6F19FC
+    max-width: 1540px
+    max-height: 137px
+    margin: 0 auto 39px
+    padding: 1.5em 6em
+    &__container
+        // border: 2px solid orangered
+        max-width: 1170px
+        max-height: 79px
+        margin: 0 auto
+        display: flex
+        column-gap: 4.5em
+    &__text
+        // border: 2px solid #fce919
+        max-width: 270px
+        font-family: 'Open Sans'
+        font-size: calc(8px + 6 * (100vw / 1600))
+
+.btn-up
+    font-family: 'Open Sans'
+    position: fixed
+    background: rgb(0, 0, 0, 0.2)
+    right: 1em
+    bottom: 1em
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 60px
+    height: 50px
+    border-top-left-radius: 8px
+    border-top-right-radius: 8px
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out
+    transform: translateY(0)
+    opacity: 1
+    &:hover
+        background-color: rgb(0, 0, 0, 0.3)
+        transform: scale(1.1)
+    &::before
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E")
+
+
+.btn-up_hide
+    display: none
+.btn-up_hiding
+    opacity: 0
+    transform: translateY(100px)
+        
+
+@media (max-width: 1023px)
+    .footer
+        padding: 1em 5em
+        &__container
+            column-gap: 2em
+
+
+@media (max-width: 767px)
+    .footer
+        padding: 1em 2.5em
+        &__container
+            column-gap: 3em
+
+
+@media (max-width: 479px)
+    .footer
+        padding: 1em
+        &__text
+            font-size: calc(8px + (6 + 6 * 0.7) * ((100vw - 320px) / 1600))
+
