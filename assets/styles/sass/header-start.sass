@@ -3,13 +3,8 @@
     box-sizing: border-box
     margin: 0 auto
 .background-container
-    // border: 4px solid green
     margin: 0 auto
-    // background-image: url(/assets/images/header-bg.jpg)
-    // background-image: url(./assets/images/header-bg.jpg)
     background-image: url(../../images/header-bg.jpg)
-    // background-image: url(.../images/header-bg.jpg)
-    // background-image: url(.../images/header-bg.jpg)
     background-position: center center
     background-repeat: no-repeat
     // background-attachment: fixed
@@ -17,24 +12,22 @@
     background-color: #2d3b5e
     max-width: 1600px
     max-height: 900px
+    
 .header
     
     max-width: 1540px
     max-height: 837px
     margin: 0 auto
     padding: 1.5em 6em
-    // border: 6px solid #6F19FC
-    font-family: 'Anton'
+    font-family: "Anton"
     color: #FFFFFF
     &__container
-        // border: 2px solid orangered
         max-width: 1170px
         max-height: 781px
         margin: 0 auto
+        // border: 2px solid pink
     &__links
-        // position: fixed
         z-index: 2
-        // position: relative
         // border: 2px solid lightgreen
         max-width: 1169px
         height: 48px
@@ -47,7 +40,6 @@
     &__img
         max-width: 90%
     &__list
-        // position: fixed
         display: flex
         list-style: none
         padding: 0
@@ -71,27 +63,28 @@
         background: #FFF
         transition: width .3s ease-out
     &__list-item a:hover::after
-        width: 100% 
+        width: 100%
+        background: #edecec 
     &__phone a
-        // border: 2px solid red
         color: white
         text-decoration: none
         font-size: calc(14px + 3 *  (100vw / 1600))
         letter-spacing: 0.1em
         text-transform: uppercase
+        &:hover
+            color: #edecec
     &__burger
         display: none
     &__content
-        padding: 15em 0
+        padding: 10em 0 12em
     &__subtitle
         font-size: calc(18px + 10 *  (100vw / 1600))
         letter-spacing: 0.1em
         text-transform: uppercase
-        margin: -5px 0
     &__title
         font-size: calc(58px + 42 * (100vw / 1600))
         text-transform: uppercase
-        margin: -10px 0 0.4em
+        margin: 0 0 0.6em
         &:hover
             background-image: linear-gradient(to top,#ef8a2b, #fff,#fff )
             color: transparent
@@ -107,6 +100,7 @@
         color: white
         border: 1px solid #FFF
         padding: 1em 3.2em
+        transition: background ease-out 0.4s
     &__button:hover
         background: rgb(255, 255, 255, 0.2)
 
@@ -151,6 +145,7 @@
             align-items: center
             flex-direction: column
             background: linear-gradient(to right, #0D173E, #201a43)
+            // background: linear-gradient(to right, #9a1f77, #604cd0)
             width: 100%
             height: 100%
             top: -110%
@@ -170,7 +165,6 @@
         &__burger
             display: block
             position: relative
-            // border: 2px solid #fc0909
             width: 35px
             height: 24px
             cursor: pointer
