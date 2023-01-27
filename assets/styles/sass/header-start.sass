@@ -1,3 +1,5 @@
+html
+    scroll-behavior: smooth
 .body
     max-width: 1600px
     box-sizing: border-box
@@ -25,10 +27,8 @@
         max-width: 1170px
         max-height: 781px
         margin: 0 auto
-        // border: 2px solid pink
     &__links
         z-index: 2
-        // border: 2px solid lightgreen
         max-width: 1169px
         height: 48px
         margin: 0 auto
@@ -72,7 +72,11 @@
         letter-spacing: 0.1em
         text-transform: uppercase
         &:hover
-            color: #edecec
+            background-image: linear-gradient(to top,#ef8a2b, #fff,#fff )
+            color: transparent
+            -webkit-background-clip: text
+            background-clip: text
+            transition: 0.6s ease
     &__burger
         display: none
     &__content
@@ -112,7 +116,6 @@
             margin-left: 30px
         &__list-item:first-child a
             margin-left: 30px
-        &__title
 
 
 @media (max-width: 767px)
@@ -145,7 +148,6 @@
             align-items: center
             flex-direction: column
             background: linear-gradient(to right, #0D173E, #201a43)
-            // background: linear-gradient(to right, #9a1f77, #604cd0)
             width: 100%
             height: 100%
             top: -110%

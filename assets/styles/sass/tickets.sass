@@ -1,1 +1,108 @@
-// .tickets{}
+.book
+    &__overlay
+        position: fixed
+        display: none
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, 0.65)
+        -webkit-animation: fade .6s
+        -moz-animation: fade .6s
+        animation: fade .6s
+        overflow: auto
+    &__popup
+        max-width: fit-content
+        max-height: fit-content
+        top: 25%
+        left: 0
+        right: 0
+        font-size: 14px
+        margin: auto
+        position: absolute
+        padding: 3rem 4rem
+        background-image: url(../../images/header-bg.jpg)
+        background-position: center center
+        border: none
+        z-index: 1000
+        border-radius: 6px
+        box-shadow: 0 0 10px 10px rgba(0,0,0,0.5)
+        transition: ease-out 0.5s
+    &__close
+        top: 10px
+        right: 10px
+        width: 30px
+        height: 30px
+        position: absolute
+        border: none
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        -ms-border-radius: 50%
+        -o-border-radius: 50%
+        border-radius: 50%
+        background: none
+        box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.16), 0 4px 10px 0 rgba(0, 0, 0, 0.12)
+        cursor: pointer
+        outline: none
+    &__close:before 
+        color: rgba(255, 255, 255, 0.9)
+        content: "X"
+        font-family:  Arial, Helvetica, sans-serif
+        font-size: 14px
+        font-weight: normal
+        text-decoration: none
+        text-shadow: 0 -1px rgba(0, 0, 0, 0.9)
+        -webkit-transition: all 0.5s
+        -moz-transition: all 0.5s
+        transition: all 0.5s
+    &__close:hover
+        background: #616889
+    &__tickets
+        display: flex
+        flex-direction: column
+        row-gap: 1.5rem
+        align-items: center
+        justify-content: center
+        input
+            width: 190px
+            min-height: 30px
+            color: #070d26
+            font-family: "Anton"
+            text-transform: uppercase
+            letter-spacing: 0.12rem
+            padding-left: 10px
+            outline: none
+            border: none
+            transition: all 0.3s
+            &::placeholder
+                font-family: "Open Sans"
+                text-transform: none
+                letter-spacing: 0rem
+            &:focus
+                min-height: 30px
+                outline: 1px solid #070d26
+            &:hover
+                transform: scale(1.05)
+        
+    &__TicketsBtn
+        background:  rgb(97, 104, 137, 0.1)
+        border: 1px solid #fff
+        color:#fff
+        font-family: "Anton"
+        font-size: large
+        text-transform: uppercase
+        letter-spacing: 0.12rem
+        padding: 0.7rem 2rem
+        margin-top: 1rem
+        transition: all ease-out 0.4s
+        &:hover
+            letter-spacing: 0.12rem
+            background: rgb(255, 255, 255, 0.4)
+
+@media (max-width: 479px)
+    .book
+        &__popup
+            padding: 3rem 2rem
+        &__tickets
+            input
+                width: fit-content

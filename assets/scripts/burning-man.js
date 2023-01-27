@@ -36,7 +36,7 @@ const btnUp = {
       }
       this.scrolling = false;
       // если пользователь прокрутил страницу более чем на 200px
-      if (scrollY > 400) {
+      if (scrollY > 180) {
         this.show(); // сделаем кнопку .btn-up видимой
       } else {
         this.hide(); // иначе скроем кнопку .btn-up
@@ -50,7 +50,6 @@ const btnUp = {
       window.scrollTo({
         top: 0,
         left: 0,
-        behavior: "smooth",
       });
     };
   },
@@ -69,10 +68,44 @@ headerBurger.addEventListener("click", function () {
   document.querySelector(".body").classList.toggle("lock");
 });
 
-// --- tickets ---//
+//--- BOOK tickets ---//
+let tickets = document.querySelector(".tickets");
 
-// let tickets = document.querySelector("tickets");
+let FirstName = document.querySelector(".book__firstName");
+let LastName = document.querySelector(".book__lastName");
+let TicketsAmount = document.querySelector(".book__ticketsAmount");
+let phone = document.querySelector(".book__phone");
 
-// tickets.addEventListener("click", () => {
-//   tickets.classList.display = "block";
-// });
+let overlay = document.querySelector(".book__overlay");
+let closeBtn = document.querySelector(".book__close");
+let bookTicketsBtn = document.querySelector(".book__TicketsBtn");
+let bookTicketsBtnMain = document.querySelector(".header__button");
+
+bookTicketsBtnMain.addEventListener("click", () => {
+  overlay.style.display = "initial";
+});
+
+tickets.addEventListener("click", () => {
+  overlay.style.display = "initial";
+});
+
+bookTicketsBtn.onclick = () => {
+  alert(
+    `Hello, ${FirstName.value} ${LastName.value}!
+${TicketsAmount.value} tickets was successfully booked.
+
+One day before the event you'll get a reminder
+to the phone number ${phone.value}
+
+Have a great time! 😉`
+  );
+  overlay.style.display = "none";
+  FirstName.value = "";
+  LastName.value = "";
+  TicketsAmount.value = "";
+  phone.value = "";
+};
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
